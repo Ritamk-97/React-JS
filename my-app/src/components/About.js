@@ -5,7 +5,8 @@ export default function About() {
         if (currentMode === "dark") {
             setMyStyle({
                 color : 'black',
-                backgroundColor : 'white'
+                backgroundColor : 'white',
+                border : '1px solid black' 
             });
             setBtnColorBlack(true);
             setBtnText("Enable Dark mode");
@@ -13,7 +14,8 @@ export default function About() {
         } else if (currentMode === "light") {
             setMyStyle({
                 color : 'white',
-                backgroundColor : 'black'
+                backgroundColor : 'black',
+                border : '1px solid white' 
             });
             setBtnColorBlack(false);
             setBtnText("Enable light mode");
@@ -22,7 +24,8 @@ export default function About() {
     }
     const [myStyle, setMyStyle] = useState({
         color : 'black',
-        backgroundColor : 'white'
+        backgroundColor : 'white',
+        border : '1px solid black'
     })
     const [currentMode, nextMode] = useState("light");
     const [lightMode, setBtnColorBlack] = useState(true)
